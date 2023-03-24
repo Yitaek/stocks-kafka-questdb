@@ -40,7 +40,9 @@ services:
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
 
   kafka-connect:
-    image: yitaekhwang/cp-kafka-connect-questdb:7.3.2
+    image: cp-kafka-connect-questdb
+    build:
+      context: .
     hostname: connect
     container_name: connect
     depends_on:
